@@ -1,0 +1,203 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#map {
+	height: 100%;
+	border: 3px solid #2FB634;
+	border-radius: 0px;
+}
+
+.gmnoprint,
+.gmnoscreen,
+.gmnoprint,
+.gm-style-cc {
+	display: none;
+}
+
+.button_div {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	margin-top: 50px;
+	align-items: center;
+}
+.go_app {
+	background-color: #2b2ba500;
+	text-align: center;
+	color: #2b2ba500;
+	text-decoration: underline;
+	width: 200px;
+	height: 55px;
+	border-radius: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	border: none;
+}
+.web_site {
+	background-color: #2b2ba500;
+	text-align: center;
+	color: #2b2ba500;
+	width: 200px;
+	height: 55px;
+	border: none;
+	border-radius: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.infoWindow__header__brand {
+	font-size: large;
+	font-weight: bold;
+}
+.infoWindow__body {
+	position: relative;
+	width: 100%;
+	font-size: medium;
+	font-weight: bold;
+}
+
+/* Şehir Arama Butonu */
+.search-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 25%;
+  height: 5%;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  overflow: hidden;
+  top: 5%;
+  left: 40%;
+  border: 1px solid #2FB634;
+}
+
+.search-container input[type=text] {
+  flex: 1;
+  height: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.search-container button {
+  height: 100%;
+  width: 15%;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all .3s ease-in-out;
+}
+
+.search-container button:hover {
+    background-color: #429245;
+}
+
+@media (max-width :891px){
+  	.search-container {
+      width: 25%;
+      height: 5%;
+      left: 37.5%;
+	}
+    .search-container input[type=text] {
+      width: 80%;
+      padding: 15px;
+      font-size: 18px;
+  	}
+
+    .search-container button {
+        width: 20%;
+        font-size: 20px;
+    }
+}
+
+@media (max-width :890px) {
+  	.search-container {
+      width: 30%;
+      height: 5%;
+      left: 35%;
+	}
+    .search-container input[type=text] {
+      width: 80%;
+      padding: 15px;
+      font-size: 18px;
+  	}
+
+    .search-container button {
+        width: 20%;
+        font-size: 20px;
+    }
+}
+
+
+
+@media (max-width :690px) {
+  	.search-container {
+      width: 35%;
+      height: 5%;
+      left: 32.5%;
+	}
+    .search-container input[type=text] {
+      width: 80%;
+      padding: 15px;
+      font-size: 17px;
+  	}
+
+    .search-container button {
+        width: 20%;
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width :490px) {
+  	.search-container {
+      width: 50%;
+      height: 5%;
+      left: 25%;
+	}
+    .search-container input[type=text] {
+      width: 80%;
+      padding: 15px;
+      font-size: 16px;
+  	}
+
+    .search-container button {
+        width: 20%;
+        font-size: 20px;
+    }
+}
+@media (max-width :390px) {
+  	.search-container {
+      width: 45%;
+      height: 5%;
+      left: 27.5%;
+	} 
+    .search-container input[type=text] {
+      width: 80%;
+      padding: 15px;
+      font-size: 15px;
+  	} 
+
+    .search-container button {
+        width: 20%;
+        font-size: 20px;
+    }
+  .gm-style .gm-style-iw-c {
+  	width: 50%;
+    height : 30vh;
+  }
+}
+.refresh {
+	cursor: pointer;
+	margin-bottom: 60px;
+}
