@@ -1,17 +1,18 @@
-trigger:
-- main
-
-pool:
-  vmImage: 'ubuntu-latest'
-
 steps:
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)'
-    Contents: '*.html'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+- script: |
+    git config --global user.email "kartzipcom@gmail.com"
+    git config --global user.name "Kartzip"
+  displayName: 'Configure Git'
+
+- script: |
+    git clone https://github.com/kartzipcom/app
+    cd repo
+    git checkout main
+    cp -R ./* $(Build.ArtifactStagingDirectory)
+  displayName: 'Clone and copy repo'
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'html'
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'myWebsite'
+  displayName: 'Publish Artifact'
